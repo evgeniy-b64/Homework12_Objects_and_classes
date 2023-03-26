@@ -1,5 +1,6 @@
 package lesson1;
 
+// Реализуйте методы toString, equals и hashCode в классах Author и Book, которые вы создали на прошлом уроке.
 public class Application {
     public static void main(String[] args) {
         Author pratchett = new Author("Терри", "Пратчетт");
@@ -8,16 +9,9 @@ public class Application {
         Author pelevin = new Author("Виктор", "Пелевин");
         Book chisla = new Book(pelevin, "Числа", 2003);
 
-        viewBookInfo(pelevin, chisla);
-        viewBookInfo(pratchett, pyramids);
+        System.out.printf(chisla.toString() + "\n");
+        System.out.printf(pyramids.toString() + "\n");
         pyramids.setPublishingYear(1993);
-        viewBookInfo(pratchett, pyramids);
-    }
-
-    public static void viewBookInfo (Author author, Book book){
-        System.out.println("Автор: "+author.getAuthorFirstName() + " " + author.getAuthorLastName());
-        System.out.println("Название книги: "+book.getBookName());
-        System.out.println("Год издания: " + book.getPublishingYear());
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        System.out.printf(pyramids.toString() + "\n");
     }
 }
